@@ -1,0 +1,9 @@
+ctrlp.vim
+vim-airline
+vim-colors-solarized
+vim-commentary
+vim-endwise
+vim-fugitive
+vim-l9
+vim-sensible
+vim-surround
