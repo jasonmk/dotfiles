@@ -28,3 +28,7 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
 
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+        \| exe "normal! g'\"" | endif
+endif
