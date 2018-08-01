@@ -1,0 +1,22 @@
+[http]
+	sslVerify = false
+[push]
+	default = simple
+[pull]
+  rebase = true
+[merge]
+  tool = kdiff3
+[core]
+  autocrlf = false
+[alias]
+  s  = status
+  st = status
+  co = checkout
+  ci = commit
+  ca = commit --amend --no-edit
+  ls = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(reset) %C(auto)%d%C(reset) %C(white)%s%C(reset) %C(green)(%ar)%C(reset) - %C(cyan)%an%C(reset)'
+  la = log --graph --all --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(reset) %C(auto)%d%C(reset) %C(white)%s%C(reset) %C(green)(%ar)%C(reset) - %C(cyan)%an%C(reset)'
+  stat = show --stat --oneline
+[fetch]
+  prune = true
+

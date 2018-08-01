@@ -19,14 +19,11 @@ au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
 execute pathogen#infect()
 syntax on
 
-if !empty(matchstr(system('rvm current'), 'jruby'))
-  let g:ruby_path = '/apps/rvm/rubies/jruby-1.7.18/lib/ruby/1.9/site_ruby,/apps/rvm/rubies/jruby-1.7.18/lib/ruby/shared,/apps/rvm/rubies/jruby-1.7.18/lib/ruby/1.9'
-endif
-
 filetype plugin indent on
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
+let g:ctrlp_working_path_mode = 'r'
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")

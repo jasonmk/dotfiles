@@ -25,6 +25,6 @@ function git-untracked {
   fi
 }
 
-PS1='\[\e[1;37m\]$(rvm-prompt)\n\[\e[0;36m\]\T \d \[\e[1;30m\][\[\e[1;33m\]\u\[\e[1;34m\]@\h\[\e[1;30m\]\[\e[0;32m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " ($(git-branch-name) $(git-dirty)$(git-untracked)$(git-unpushed))"; fi)\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '
+PS1='\[\e[0;36m\]\T \d \[\e[1;30m\][\[\e[1;33m\]\u\[\e[1;34m\]@\h\[\e[1;30m\]\[\e[0;32m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo " ($(git-branch-name) $(git-dirty)$(git-untracked)$(git-unpushed))"; fi)\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '
 
 export PS1
